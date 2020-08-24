@@ -16,6 +16,22 @@ class CustomText(models.Model):
         blank=True,
         related_name="customtext_tests",
     )
+    user = models.OneToOneField(
+        "home.CustomText",
+        on_delete=models.SET_DEFAULT,
+        default=2,
+        null=True,
+        blank=True,
+        related_name="customtext_user",
+    )
+    new = models.OneToOneField(
+        "home.CustomText",
+        on_delete=models.SET_DEFAULT,
+        default=1,
+        null=True,
+        blank=True,
+        related_name="customtext_new",
+    )
 
     def __str__(self):
         return self.title
