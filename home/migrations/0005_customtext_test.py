@@ -7,13 +7,20 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0004_auto_20200824_0532'),
+        ("home", "0004_auto_20200824_0532"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='test',
-            field=models.ForeignKey(blank=True, default=1, null=True, on_delete=django.db.models.deletion.SET_DEFAULT, related_name='customtext_test', to='home.CustomText'),
+            model_name="customtext",
+            name="test",
+            field=models.ForeignKey(
+                blank=True,
+                default=1,
+                null=True,
+                on_delete=django.db.models.deletion.SET_DEFAULT,
+                related_name="customtext_test",
+                to="home.CustomText",
+            ),
         ),
     ]
