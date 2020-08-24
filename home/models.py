@@ -32,6 +32,14 @@ class CustomText(models.Model):
         blank=True,
         related_name="customtext_new",
     )
+    test = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.SET_DEFAULT,
+        default=1,
+        null=True,
+        blank=True,
+        related_name="customtext_test",
+    )
 
     def __str__(self):
         return self.title
